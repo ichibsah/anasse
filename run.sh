@@ -18,4 +18,4 @@ python3 -m venv ./.venv/ --upgrade
 
 pip freeze > ./requirements.txt
 
-python3 ./manage.py runserver 0.0.0.0:8000'
+python3 manage.py runserver 0.0.0.0:8000
