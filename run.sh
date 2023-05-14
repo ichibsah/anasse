@@ -12,7 +12,7 @@ git commit -am "$(date)"
 
 python3 -m venv ./.venv/ --upgrade
 
-. ./.venv/bin/activate
+. .venv/bin/activate
 
 pip freeze > requirements.txt
 
