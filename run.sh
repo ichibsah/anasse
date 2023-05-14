@@ -10,7 +10,7 @@ git commit -am "$(date)"
 
 # flask run
 
-python -m venv ./.venv --upgrade
+python -m venv ./.venv/ --upgrade
 
 source ./.venv/bin/activate
 
