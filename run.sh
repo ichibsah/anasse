@@ -10,10 +10,10 @@ git commit -am "$(date)"
 
 # flask run
 
-python -m venv ./.venv/ --upgrade
+python3 -m venv ./.venv/ --upgrade
 
 source ./.venv/bin/activate
 
 pip freeze > requirements.txt
 
-python manage.py runserver 0.0.0.0:8000'
+python3 manage.py runserver 0.0.0.0:8000'
