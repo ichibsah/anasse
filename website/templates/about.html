@@ -3,13 +3,13 @@
 
             {% block navigation %}
 	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item"><a href="{% url 'website:home' %}" class="nav-link">{{cNHome}}</a></li>
-	        	<li class="nav-item active"><a href="{% url 'website:about' %}" class="nav-link">{{cNAbout}}</a></li>
-	        	<li class="nav-item"><a href="{% url 'website:services' %}" class="nav-link">{{cNServices}}</a></li>
+	        	<li class="nav-item"><a href="{% url 'website:home' %}" class="nav-link">{{cinfo.cNHome}}</a></li>
+	        	<li class="nav-item active"><a href="{% url 'website:about' %}" class="nav-link">{{cinfo.cNAbout}}</a></li>
+	        	<li class="nav-item"><a href="{% url 'website:services' %}" class="nav-link">{{cinfo.cNServices}}</a></li>
 	        	{% comment %} <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
 	        	<li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li> {% endcomment %}
-	          <li class="nav-item"><a href="{% url 'website:blog' %}" class="nav-link">{{cNBlog}}</a></li>
-	          <li class="nav-item"><a href="{% url 'website:contact' %}" class="nav-link">{{cNContact}}</a></li>
+	          <li class="nav-item"><a href="{% url 'website:blog' %}" class="nav-link">{{cinfo.cNBlog}}</a></li>
+	          <li class="nav-item"><a href="{% url 'website:contact' %}" class="nav-link">{{cinfo.cNContact}}</a></li>
 	        </ul>
             {% endblock navigation %}
 
@@ -19,8 +19,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end">
           <div class="col-md-9 ftco-animate pb-5">
-          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="{% url 'website:home' %}">{{cNHome}} <i class="fa fa-chevron-right"></i></a></span> <span>{{cNAbout}} <i class="fa fa-chevron-right"></i></span></p>
-            <h1 class="mb-0 bread">{{cNAbout}}</h1>
+          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="{% url 'website:home' %}">{{cinfo.cNHome}} <i class="fa fa-chevron-right"></i></a></span> <span>{{cinfo.cNAbout}} <i class="fa fa-chevron-right"></i></span></p>
+            <h1 class="mb-0 bread">{{cinfo.cNAbout}}</h1>
           </div>
         </div>
       </div>
@@ -30,26 +30,28 @@
     	<div class="container">
     		<div class="row d-flex no-gutters">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-items-center justify-content-center py-5 py-md-0" style="background-image:url(images/about.jpg);">
+    				<div class="img d-flex align-items-center justify-content-center py-5 py-md-0" style="background-image:url({%  static 'website/images/about.jpg'%});">
     					<div class="time-open-wrap">
     						<div class="desc p-4">
-		    					<h2>Business Hours</h2>
+		    					<h2>{{cinfo.cOpenHrs}}</h2>
 			              <div class="opening-hours">
-			              	<h4>Opening Days:</h4>
+			              	<h4>{{cinfo.cOpenDays}}</h4>
 			              	<p class="pl-3">
-			              		<span><strong>Monday – Friday:</strong> 9am to 20 pm</span>
-			              		<span><strong>Saturday :</strong> 9am to 17 pm</span>
+			              		{% comment %} <span><strong>Monday – Friday:</strong> 9am to 20 pm</span> {% endcomment %}
+			              		<span>{{cinfo.cOpnMn}}</span>
+			              		{% comment %} <span><strong>Saturday :</strong> 9am to 17 pm</span> {% endcomment %}
+			              		<span>{{cinfo.cOpnFr}}</span>
 			              	</p>
-			              	<h4>Vacations:</h4>
+			              	<h4>{{cinfo.cVaccation}}:</h4>
 			              	<p class="pl-3">
-			              		<span>All Sunday Days</span>
-			              		<span>All Official Holidays</span>
+			              		<span>Alle Sonntagstage</span>
+			              		<span>Alle gesetzlichen Feiertage</span>
 			              	</p>
 			              </div>
 		    				</div>
 								<div class="desc p-4 bg-secondary">
-									<h3 class="heading">For Emergency Cases</h3>
-									<span class="phone">(+01) 123 456 7890</span>
+									<h3 class="heading">{{cinfo.cEmergency}}</h3>
+									<span class="phone">{{cinfo.cTel}}</span>
 								</div>
     					</div>
     				</div>
@@ -57,16 +59,16 @@
     			<div class="col-md-6 pl-md-5 pt-md-5">
     				<div class="row justify-content-start py-5">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<span class="subheading">Welcome to Cleaning Company</span>
-		            <h2 class="mb-4">Let's make you fresher than ever</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		          	<span class="subheading">Willkommen in unserem Reinigungsunternehmen</span>
+		            <h2 class="mb-4">Lass uns dich erfrischt fühlen lassen wie nie zuvor!</h2>
+		            <p>Bei ANASSE Hotelservice & Dienstleistungen zeichnen wir uns durch eine jahrzehntelange Erfahrung in der Dienstleistungsbranche und im Gastgewerbe aus. Möchten Sie mit uns zusammenarbeiten?</p>
 		          </div>
 		        </div>
 						<div class="row ftco-counter py-5" id="section-counter">
 		          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18">
 		              <div class="text">
-		                <strong class="number" data-number="45">0</strong>
+		                <strong class="number" data-number="10">0</strong>
 		              </div>
 		              <div class="text">
 		              	<span>Years of <br>Experienced</span>
@@ -76,7 +78,7 @@
 		          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18">
 		              <div class="text">
-		                <strong class="number" data-number="2342">0</strong>
+		                <strong class="number" data-number="50">0</strong>
 		              </div>
 		              <div class="text">
 		              	<span>Happy <br>Customers</span>
@@ -86,7 +88,7 @@
 		          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18">
 		              <div class="text">
-		                <strong class="number" data-number="30">0</strong>
+		                <strong class="number" data-number="130">0</strong>
 		              </div>
 		              <div class="text">
 		              	<span>Building <br>Cleaned</span>

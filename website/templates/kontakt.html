@@ -3,13 +3,13 @@
 
             {% block navigation %}
 	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item"><a href="{% url 'website:home' %}" class="nav-link">Willkommen</a></li>
-	        	<li class="nav-item"><a href="{% url 'website:about' %}" class="nav-link">Über uns</a></li>
-	        	<li class="nav-item"><a href="{% url 'website:services' %}" class="nav-link">Dienstleistung</a></li>
+	        	<li class="nav-item"><a href="{% url 'website:home' %}" class="nav-link">{{cinfo.cNHome}}</a></li>
+	        	<li class="nav-item"><a href="{% url 'website:about' %}" class="nav-link">{{cinfo.cNAbout}}</a></li>
+	        	<li class="nav-item"><a href="{% url 'website:services' %}" class="nav-link">{{cinfo.cNServices}}</a></li>
 	        	{% comment %} <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
 	        	<li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li> {% endcomment %}
-	          <li class="nav-item"><a href="{% url 'website:blog' %}" class="nav-link">Stellenangebote</a></li>
-	          <li class="nav-item active"><a href="{% url 'website:contact' %}" class="nav-link">Kontakt</a></li>
+	          <li class="nav-item"><a href="{% url 'website:blog' %}" class="nav-link">{{cinfo.cNBlog}}</a></li>
+	          <li class="nav-item active"><a href="{% url 'website:contact' %}" class="nav-link">{{cinfo.cNContact}}</a></li>
 	        </ul>
             {% endblock navigation %}
 {% block content %}
@@ -19,8 +19,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end">
           <div class="col-md-9 ftco-animate pb-5">
-          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Contact <i class="fa fa-chevron-right"></i></span></p>
-            <h1 class="mb-0 bread">Contact</h1>
+          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">{{cinfo.cNHome}} <i class="fa fa-chevron-right"></i></a></span> <span>{{cinfo.cNContact}} <i class="fa fa-chevron-right"></i></span></p>
+            <h1 class="mb-0 bread">{{cinfo.cNContact}}</h1>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
 				        			<span class="fa fa-map-marker"></span>
 				        		</div>
 				        		<div class="text">
-					            <p><span>Address:</span> {{cAddr}}, {{cPLZ}} {{cCity}}</p>
+					            <p><span>Address:</span> {{cinfo.cAddr}}, {{cinfo.cPLZ}} {{cinfo.cCity}}</p>
 					          </div>
 				          </div>
 								</div>
@@ -48,7 +48,7 @@
 				        			<span class="fa fa-phone"></span>
 				        		</div>
 				        		<div class="text">
-					            <p><span>Phone:</span> <a href="tel://{{cTel}}">{{cTel}}</a></p>
+					            <p><span>Phone:</span> <a href="tel://{{cinfo.cTel}}">{{cinfo.cTel}}</a></p>
 					          </div>
 				          </div>
 								</div>
@@ -58,7 +58,7 @@
 				        			<span class="fa fa-paper-plane"></span>
 				        		</div>
 				        		<div class="text">
-					            <p><span>Email:</span> <a href="mailto:{{cEmail}}">{{cEmail}}</a></p>
+					            <p><span>Email:</span> <a href="mailto:{{cinfo.cEmail}}">{{cinfo.cEmail}}</a></p>
 					          </div>
 				          </div>
 								</div>
@@ -68,7 +68,7 @@
 				        			<span class="fa fa-globe"></span>
 				        		</div>
 				        		<div class="text">
-					            <p><span>Website</span> <a href="#">{{cWebsite}}</a></p>
+					            <p><span>Website</span> <a href="#">{{cinfo.cWebsite}}</a></p>
 					          </div>
 				          </div>
 								</div>
