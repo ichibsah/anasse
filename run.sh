@@ -8,11 +8,11 @@
 #docker exec -it meryem sh
 git add .
 git commit -am "$(date)"
-#git push
+git push
 
 # flask run
 
-python3 -m venv ./.venv/ --upgrade
+#python3 -m venv ./.venv/ --upgrade
 
 . ./.venv/bin/activate
 
