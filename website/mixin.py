@@ -36,10 +36,14 @@ class GermanMixin:
         "cSRezeptionSl":"Ein freundlicher und kompetenter Empfang ist der Schlüssel eines gastfreundlichen Hauses, hier bieten Wir Ihnen passendes Personal um Ihren Standard zu gewährleisten. Sprechen Sie uns an.",
         "cSService":"Service",
         "cSServiceSl":"Dienstleistung ist unsere Leidenschaft! Sei es im Restaurantservice, Bankett oder Gala wir bieten Ihnen die passenden kooperations- Möglichkeiten",
-        "cSHousekeep":"Housekeeping",
+        "cSHousekeep":"Haushaltung",
         "cSHousekeepSl":"Two smiling cleaners cleaning room together Anasse Hotelservice steht für Reinigungsarbeiten der extra klasse! Zimmereinigung Bereitstellung von Hausdamen Minibar service Abdeckservice/ Turndown Betten und Wäschedienste Matratzenreinigung Pflege von Public Areas und Außenanlagen Konferenzservice Vorarbeiter zur Einarbeitung Allgemeiner ersonalservice Im allgemeinen bieten wir Ihnen folgende Dienstleistungen, hier unsere Leistungen im Überblick:",
-        "cSCatering":"Catering",
+        "cSCatering":"Verpflegung",
         "cSCateringSl":"Bankett- und Konferenzservice Personaldienste Empfangsservice Post- und Botendienste Schmutzfangmattenservice Hausmeisterservice",
+        "cSStellengebote":"Sie möchten sich bewerben? Wir suchen zuverlässige Mitarbeiter in unseren verschiedenen Objekten. Was Sie mitbringen sollten: Pünktlichkeit, Teamgeist,kundenfreundliches Auftreten,Belastbarkeit (wenn möglich Fahrerlaubnis der Klasse B)Ihre Anfragen und Bewerbungsunterlagen können Sie telefonisch oder per E-Mail an info@anasse.de senden. ",
+        "cSPoolcleaning":"Pool-Reinigung",
+        "cSCarpetcleaning":"Teppich-Reinigung",
+
     }
     
     my_data1 = {
