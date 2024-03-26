@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 
-            {% block navigation %}
-	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item"><a href="{% url 'website:home' %}" class="nav-link">{{cNHome}}</a></li>
-	        	<li class="nav-item"><a href="{% url 'website:about' %}" class="nav-link">{{cNAbout}}</a></li>
-	        	<li class="nav-item active"><a href="{% url 'website:services' %}" class="nav-link">{{cNServices}}</a></li>
-	        	{% comment %} <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-	        	<li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li> {% endcomment %}
-	          <li class="nav-item"><a href="{% url 'website:blog' %}" class="nav-link">{{cNBlog}}</a></li>
-	          <li class="nav-item"><a href="{% url 'website:contact' %}" class="nav-link">{{cNContact}}</a></li>
-	        </ul>
-            {% endblock navigation %}
+{% block navigation %}
+<ul class="navbar-nav ml-auto">
+	<li class="nav-item"><a href="{% url 'website:home' %}" class="nav-link">{{cinfo.cNHome}}</a></li>
+	<li class="nav-item"><a href="{% url 'website:about' %}" class="nav-link">{{cinfo.cNAbout}}</a></li>
+	<li class="nav-item active"><a href="{% url 'website:services' %}" class="nav-link">{{cinfo.cNServices}}</a></li>
+	{% comment %} <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+	<li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li> {% endcomment %}
+	<li class="nav-item"><a href="{% url 'website:blog' %}" class="nav-link">{{cinfo.cNBlog}}</a></li>
+	<li class="nav-item"><a href="{% url 'website:contact' %}" class="nav-link">{{cinfo.cNContact}}</a></li>
+</ul>
+{% endblock navigation %}
 
 {% block content %}
     <section class="hero-wrap hero-wrap-2" style="background-image: url({% static 'website/images/bg_2.jpg' %});" data-stellar-background-ratio="0.5">
@@ -26,105 +26,106 @@
       </div>
     </section>
 
-    <section class="ftco-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5 mb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">{{cNServices}}</span>
-            <h2>How We Works</h2>
-          </div>
-        </div>
-    		<div class="row">
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-            <div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-workplace"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Office Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-          	<div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-pool"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Pool Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-            <div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-rug"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Carpet Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div> 
-          </div>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5 mb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<span class="subheading">Unsere Dienstleistungen</span>
+					<h2>Wie wir arbeiten</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-lg-4 services ftco-animate">
+					<div class="d-block d-flex">
+						<div class="icon d-flex justify-content-center align-items-center">
+							<span class="flaticon-workplace"></span>
+						</div>
+						<div class="media-body pl-3">
+							<h3 class="heading">Büroreinigung</h3>
+							<p>Büroreinigung ist entscheidend, um ein gesundes Arbeitsumfeld zu schaffen. Unsere professionellen Reinigungskräfte sorgen dafür, dass Ihr Büro immer sauber und einladend ist.</p>
+							<p><a href="#" class="btn-custom">Mehr erfahren</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 services ftco-animate">
+					<div class="d-block d-flex">
+						<div class="icon d-flex justify-content-center align-items-center">
+							<span class="flaticon-pool"></span>
+						</div>
+						<div class="media-body pl-3">
+							<h3 class="heading">Pool-Reinigung</h3>
+							<p>Unser Team kümmert sich darum, dass Ihr Pool immer glasklar und hygienisch sauber ist. Genießen Sie unbeschwerte Stunden am Pool, ohne sich um die Reinigung kümmern zu müssen.</p>
+							<p><a href="#" class="btn-custom">Mehr erfahren</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 services ftco-animate">
+					<div class="d-block d-flex">
+						<div class="icon d-flex justify-content-center align-items-center">
+							<span class="flaticon-rug"></span>
+						</div>
+						<div class="media-body pl-3">
+							<h3 class="heading">Teppichreinigung</h3>
+							<p>Unsere Teppichreinigungsspezialisten verwenden modernste Technologien, um Ihre Teppiche zu reinigen und zu pflegen. Genießen Sie ein frisches und sauberes Gefühl unter Ihren Füßen.</p>
+							<p><a href="#" class="btn-custom">Mehr erfahren</a></p>
+						</div>
+					</div> 
+				</div>
+				<div class="col-md-6 col-lg-4 services ftco-animate">
+					<div class="d-block d-flex">
+						<div class="icon d-flex justify-content-center align-items-center">
+							<span class="flaticon-kitchen"></span>
+						</div>
+						<div class="media-body pl-3">
+							<h3 class="heading">Küchenreinigung</h3>
+							<p>Die Reinigung Ihrer Küche ist entscheidend für die Sicherheit und Hygiene Ihrer Lebensmittel. Unser Team sorgt dafür, dass Ihre Küche makellos sauber ist, damit Sie sich voll und ganz auf das Kochen konzentrieren können.</p>
+							<p><a href="#" class="btn-custom">Mehr erfahren</a></p>
+						</div>
+					</div> 
+				</div>
+				<div class="col-md-6 col-lg-4 services ftco-animate">
+					<div class="d-block d-flex">
+						<div class="icon d-flex justify-content-center align-items-center">
+							<span class="flaticon-garden"></span>
+						</div>
+						<div class="media-body pl-3">
+							<h3 class="heading">Gartenreinigung</h3>
+							<p>Ein gepflegter Garten trägt zur Attraktivität Ihres Anwesens bei. Unsere Gartenreinigungsspezialisten kümmern sich um das Entfernen von Unkraut, Laub und anderen Ablagerungen, damit Ihr Garten stets in bestem Zustand ist.</p>
+							<p><a href="#" class="btn-custom">Mehr erfahren</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 services ftco-animate">
+					<div class="d-block d-flex">
+						<div class="icon d-flex justify-content-center align-items-center">
+							<span class="flaticon-balcony"></span>
+						</div>
+						<div class="media-body pl-3">
+							<h3 class="heading">Fensterreinigung</h3>
+							<p>Genießen Sie klare Ausblicke und ein helles Ambiente mit unserer professionellen Fensterreinigung. Unser Team sorgt dafür, dass Ihre Fenster streifenfrei und kristallklar sind.</p>
+							<p><a href="#" class="btn-custom">Mehr erfahren</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-          	<div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-kitchen"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Kitchen Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div> 
-          </div>
-
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-            <div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-garden"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Garden Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-          	<div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-balcony"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Window Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-    	</div>
-    </section>
 
     <section class="ftco-section ftco-intro" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
     	<div class="overlay"></div>
     	<div class="container">
     		<div class="row justify-content-center">
     			<div class="col-md-8 text-center">
-    				<h2>Together we will explore new things</h2>
+    				<h2>Gemeinsam werden wir neue Dinge erforschen</h2>
     				<a href="" class="icon-video d-flex align-items-center justify-content-center"><span class="fa fa-play"></span></a>
     			</div>
     		</div>
     	</div>
     </section>
 
+
+{% comment %}
     <section class="ftco-section bg-light">
     	<div class="container">
     		<div class="row justify-content-center pb-5 mb-3">
@@ -213,5 +214,6 @@
 	      </div>
     	</div>
     </section>
+	{% endcomment %}
 
 {% endblock %}

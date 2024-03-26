@@ -38,7 +38,7 @@
 				        			<span class="fa fa-map-marker"></span>
 				        		</div>
 				        		<div class="text">
-					            <p><span>Address:</span> {{cinfo.cAddr}}, {{cinfo.cPLZ}} {{cinfo.cCity}}</p>
+					            <p><span>Addresse:</span> {{cinfo.cAddr}}, {{cinfo.cPLZ}} {{cinfo.cCity}}</p>
 					          </div>
 				          </div>
 								</div>
@@ -73,6 +73,7 @@
 				          </div>
 								</div>
 							</div>
+							{% comment %}
 							<div class="row no-gutters">
 								<div class="col-md-7">
 									<div class="contact-wrap w-100 p-md-5 p-4">
@@ -124,13 +125,16 @@
 							</div>
 						</div>
 					</div>
+					{% endcomment %}
+					{% comment %}
 					<div class="col-md-12">
 						<div id="map" class="map"></div>
 					</div>
+					{% endcomment %}
 				</div>
 			</div>
 		</section>
-
+		{% comment %}
     <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
       <div class="container">
         <div class="row d-flex justify-content-center">
@@ -152,4 +156,5 @@
         </div>
       </div>
     </section>
+	{% endcomment %}
 {% endblock %}

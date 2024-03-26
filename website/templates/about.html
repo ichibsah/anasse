@@ -71,7 +71,7 @@
 		                <strong class="number" data-number="10">0</strong>
 		              </div>
 		              <div class="text">
-		              	<span>Years of <br>Experienced</span>
+		              	<span>Jahrelange <br>Erfahrung</span>
 		              </div>
 		            </div>
 		          </div>
@@ -81,7 +81,7 @@
 		                <strong class="number" data-number="50">0</strong>
 		              </div>
 		              <div class="text">
-		              	<span>Happy <br>Customers</span>
+		              	<span>Zufriedene <br>Kunden</span>
 		              </div>
 		            </div>
 		          </div>
@@ -91,7 +91,7 @@
 		                <strong class="number" data-number="130">0</strong>
 		              </div>
 		              <div class="text">
-		              	<span>Building <br>Cleaned</span>
+		              	<span>Gebäude <br>gereinigt</span>
 		              </div>
 		            </div>
 		          </div>
@@ -106,12 +106,13 @@
 				<div class="row">
 					<div class="col-md-12 col-lg-3 pr-md-4 pb-lg-0 pb-4">
 						<div class="heading-section ftco-animate text-center text-lg-left">
-	          	<span class="subheading">Team &amp; Staff</span>
-	            <h2>Our Team</h2>
-	            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-	            <p><a href="#" class="btn btn-secondary">View All Staff</a></p>
+	          	<span class="subheading">Team &amp; Mitarbeiter</span>
+	            <h2>Unser Team</h2>
+	            <p>Wir bei ANASSE sind stolz darauf, Ihnen unser außergewöhnliches Team vorstellen zu können, das das Rückgrat unseres Hotelservice und unserer Reinigungsbetriebe ist. Eingebettet in das Herz unseres Hauses sorgen unsere engagierten Mitarbeiter dafür, dass jeder Winkel unserer Räumlichkeiten Sauberkeit und Komfort für unsere geschätzten Gäste ausstrahlt.</p>
+	            <!-- <p><a href="#" class="btn btn-secondary">View All Staff</a></p> -->
 	          </div>
 					</div>
+					{% comment %}
 					<div class="col-md-4 col-lg-3 ftco-animate d-flex">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
@@ -169,10 +170,11 @@
 							</div>
 						</div>
 					</div>
+					{% endcomment %}
 				</div>
 			</div>
 		</section>
-
+{% comment %}
     <section class="ftco-section testimony-section bg-light">
       <div class="container">
         <div class="row justify-content-center pb-5 mb-3">
@@ -264,17 +266,18 @@
         </div>
       </div>
     </section>
+{% endcomment %}	
 
-    <section class="ftco-section ftco-intro" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
-    	<div class="overlay"></div>
-    	<div class="container">
-    		<div class="row justify-content-center">
-    			<div class="col-md-8 text-center">
-    				<h2>Together we will explore new things</h2>
-    				<a href="" class="icon-video d-flex align-items-center justify-content-center"><span class="fa fa-play"></span></a>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+<section class="ftco-section ftco-intro" style="background-image: url({%static 'website/images/bg_3.jpg'%});" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2>Gemeinsam werden wir neue Dinge erforschen</h2>
+                <a href="" class="icon-video d-flex align-items-center justify-content-center"><span class="fa fa-play"></span></a>
+            </div>
+        </div>
+    </div>
+</section>
 	{% endblock %}
     
