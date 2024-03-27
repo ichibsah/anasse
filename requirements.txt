@@ -3,23 +3,17 @@ click==8.1.7
 colorama==0.4.6
 cssbeautifier==1.15.1
 Django==5.0.3
-<<<<<<< HEAD
-=======
 django-sass-compiler==1.1.0
->>>>>>> 45cc6718d1396a1325ae2178efbbb6b1f06d2943
 djlint==1.34.1
 EditorConfig==0.12.4
 html-tag-names==0.1.2
 html-void-elements==0.1.0
 jsbeautifier==1.15.1
 json5==0.9.24
-<<<<<<< HEAD
 pathspec==0.12.1
-=======
 libsass==0.23.0
 pathspec==0.12.1
 pillow==10.2.0
->>>>>>> 45cc6718d1396a1325ae2178efbbb6b1f06d2943
 PyYAML==6.0.1
 regex==2023.12.25
 six==1.16.0
