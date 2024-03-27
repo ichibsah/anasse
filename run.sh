@@ -16,6 +16,8 @@ git push
 
 . ./.venv/bin/activate
 
+pip install -r requirements.txt
+
 #pip freeze > ./requirements.txt
 
 python3 manage.py runserver 0.0.0.0:8000
