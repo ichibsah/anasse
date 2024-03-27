@@ -2,8 +2,8 @@ FROM python:3.9-slim-buster as stage-app
 
 
 COPY requirements.txt requirements.txt
-RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+#RUN pip install --upgrade pip
 COPY . code
 WORKDIR /code
 #RUN python manage.py runserver

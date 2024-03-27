@@ -19,7 +19,7 @@
 git add .
 git commit -am "$(date)"
 git push
-git push main main -f
+#git push main main -f
 
 #…or push an existing repository from the command line
 #git remote add origin git@github.com:ichibsah/anasse.git
